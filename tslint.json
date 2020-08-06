@@ -1,0 +1,9 @@
+{
+  "rules": {
+    "no-empty": true,
+    "quotemark": [
+      true,
+      "double"
+    ]
+  }
+}

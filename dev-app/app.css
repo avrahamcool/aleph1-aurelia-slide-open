@@ -1,0 +1,27 @@
+* {
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+main {
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.slider {
+	background-color: lightpink;
+}
+
+.accordion-title {
+	background-color: lightblue;
+	cursor: pointer;
+	margin: 0.5rem 0;
+}
+
+.accordion-body {
+	background-color: aliceblue;
+}
