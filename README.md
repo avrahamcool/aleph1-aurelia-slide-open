@@ -8,7 +8,7 @@
 
 [![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/avrahamcool/aleph1-aurelia-slide-open.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/avrahamcool/aleph1-aurelia-slide-open/context:javascript)
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/avrahamcool/aleph1-aurelia-slide-open.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/avrahamcool/aleph1-aurelia-slide-open/alerts/)
-[![DeepScan grade](https://deepscan.io/api/teams/5394/projects/7172/branches/67736/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=5394&pid=7172&bid=67736)
+[![DeepScan grade](https://deepscan.io/api/teams/5394/projects/13323/branches/220084/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=5394&pid=13323&bid=220084)
 
 aleph1-aurelia-slide-open is an aurelia plugin that allow you to show/hide elements in the page using sliding animation.
 without setting a fixed height.
