@@ -1,43 +1,43 @@
-import * as gulp from 'gulp';
-import * as path from 'path';
-import * as minimatch from 'minimatch';
-import * as project from '../aurelia.json';
+import * as gulp from "gulp";
+import * as path from "path";
+import * as minimatch from "minimatch";
+import * as project from "../aurelia.json";
 
 export default function copyFiles(done) {
-  if (typeof project.build.copyFiles !== 'object') {
-    done();
-    return;
-  }
+	if (typeof project.build.copyFiles !== "object") {
+		done();
+		return;
+	}
 
-  const instruction = getNormalizedInstruction();
-  const files = Object.keys(instruction);
+	const instruction = getNormalizedInstruction();
+	const files = Object.keys(instruction);
 
-  return gulp.src(files, {since: gulp.lastRun(copyFiles)})
-    .pipe(gulp.dest(x => {
-      const filePath = prepareFilePath(x.path);
-      const key = files.find(f => minimatch(filePath, f));
-      return instruction[key];
-    }));
+	return gulp.src(files, { since: gulp.lastRun(copyFiles) })
+		.pipe(gulp.dest(x => {
+			const filePath = prepareFilePath(x.path);
+			const key = files.find(f => minimatch(filePath, f));
+			return instruction[key];
+		}));
 }
 
 function getNormalizedInstruction() {
-  const files = project.build.copyFiles;
-  let normalizedInstruction = {};
+	const files = project.build.copyFiles;
+	let normalizedInstruction = {};
 
-  for (let key in files) {
-    normalizedInstruction[path.posix.normalize(key)] = files[key];
-  }
+	for (let key in files) {
+		normalizedInstruction[path.posix.normalize(key)] = files[key];
+	}
 
-  return normalizedInstruction;
+	return normalizedInstruction;
 }
 
 function prepareFilePath(filePath) {
-  let preparedPath = filePath.replace(process.cwd(), '').slice(1);
+	let preparedPath = filePath.replace(process.cwd(), "").slice(1);
 
-  //if we are running on windows we have to fix the path
-  if (/^win/.test(process.platform)) {
-    preparedPath = preparedPath.replace(/\\/g, '/');
-  }
+	//if we are running on windows we have to fix the path
+	if (/^win/.test(process.platform)) {
+		preparedPath = preparedPath.replace(/\\/g, "/");
+	}
 
-  return preparedPath;
+	return preparedPath;
 }

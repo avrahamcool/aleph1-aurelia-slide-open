@@ -1,5 +1,49 @@
-# `aleph1-aurelia-slide-open`
+# aleph1-aurelia-slide-open
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Issues](https://img.shields.io/github/issues/avrahamcool/aleph1-aurelia-slide-open.svg?style=flat)](https://github.com/avrahamcool/aleph1-aurelia-slide-open/issues)
+[![NPMVersion](https://img.shields.io/npm/v/aleph1-aurelia-slide-open.svg?style=flat)](https://www.npmjs.com/package/aleph1-aurelia-slide-open)
+[![NPMDownloads](https://img.shields.io/npm/dt/aleph1-aurelia-slide-open.svg?style=flat)](https://www.npmjs.com/package/aleph1-aurelia-slide-open) 
+[![NPMSize](https://img.shields.io/bundlephobia/min/aleph1-aurelia-slide-open.svg?style=flat)](https://www.npmjs.com/package/aleph1-aurelia-slide-open)
+
+[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/avrahamcool/aleph1-aurelia-slide-open.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/avrahamcool/aleph1-aurelia-slide-open/context:javascript)
+[![Total alerts](https://img.shields.io/lgtm/alerts/g/avrahamcool/aleph1-aurelia-slide-open.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/avrahamcool/aleph1-aurelia-slide-open/alerts/)
+[![DeepScan grade](https://deepscan.io/api/teams/5394/projects/7172/branches/67736/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=5394&pid=7172&bid=67736)
+
+aleph1-aurelia-slide-open is an aurelia plugin that allow you to show/hide elements in the page using sliding animation.
+without setting a fixed height.
+
+this is done by transitioning over `max-height` from the real element height to 0 and back.
+default transition is set to `max-height 0.25s linear`, but can be change via the complex binding.
+
+## using the Plugin
+```shell
+yarn add aleph1-aurelia-slide-open
+```
+or
+```shell
+npm install aleph1-aurelia-slide-open
+```
+
+initialize the plugin in your `main.js` or `main.ts`.
+
+```diff
+  import { PLATFORM } from "aurelia-pal";
+
+  aurelia.use
+    .standardConfiguration()
+    .developmentLogging()
++    .plugin(PLATFORM.moduleName("aleph1-aurelia-slide-open"));
+```
+
+now in your view just use the custom attribute `slide-open`:
+```html
+<div slide-open.bind="shouldBeOpen">Simple usage</div>
+or
+<div slide-open="opened.bind: shouldBeOpen; transition.bind: 'max-height 2s ease-in-out'">Complex usage</div>
+```
+
+## About the Plugin
 This project is bootstrapped by [aurelia-cli](https://github.com/aurelia/cli).
 
 This Aurelia plugin project has a built-in dev app (with CLI built-in bundler and RequireJS) to simplify development.

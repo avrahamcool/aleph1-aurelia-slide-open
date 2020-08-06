@@ -1,6 +1,6 @@
 {
 	"name": "aleph1-aurelia-slide-open",
-	"description": "An Aurelia plugin project.",
+	"description": "an aurelia plugin for showing/hiding elements with sliding animation",
 	"author": "Essoudry Avraham",
 	"version": "1.0.0",
 	"repository": {

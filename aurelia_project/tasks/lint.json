@@ -1,5 +1,5 @@
 {
-  "name": "lint",
-  "description": "Lint source files",
-  "flags": []
+	"name": "lint",
+	"description": "Lint source files",
+	"flags": []
 }
