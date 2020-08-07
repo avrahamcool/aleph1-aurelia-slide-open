@@ -32,7 +32,6 @@ export class SlideOpenCustomAttribute {
 		this.element.style.maxHeight = newValue ? `${this.element.scrollHeight}px` : "0px";
 	}
 	setTransition(newValue: string) {
-		console.log("newValue", newValue);
 		this.element.style.transition = newValue;
 	}
 }

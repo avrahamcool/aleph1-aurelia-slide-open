@@ -1,4 +1,4 @@
-# aleph1-aurelia-slide-open
+# aleph1-aurelia-slide-open - [Demo](https://avrahamcool.github.io/aleph1-aurelia-slide-open/)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Issues](https://img.shields.io/github/issues/avrahamcool/aleph1-aurelia-slide-open.svg?style=flat)](https://github.com/avrahamcool/aleph1-aurelia-slide-open/issues)

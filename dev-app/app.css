@@ -1,19 +1,61 @@
-* {
-	margin: 0;
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+html {
+	font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	box-sizing: border-box;
 }
 
 html,
-body {
-	height: 100%;
+body,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	padding: 0;
 }
 
-main {
+p {
+	margin: 3px 0;
+}
+
+html,
+body {
+	height: 100%
+}
+
+header {
+	background-color: #f4f4f4;
+	border-bottom: 1px solid black;
+}
+
+img {
+	max-height: 50px;
+	width: auto;
+}
+
+.card {
 	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+	display: grid;
+	gap: 1rem;
+	grid-template-columns: 1fr 2fr;
+	min-height: 200px;
+}
+
+.card> :first-child {
+	background-color: rgba(0, 0, 255, 0.05);
+	min-width: 300px;
 }
 
 .slider {
-	background-color: lightpink;
+	background-color: rgba(0, 255, 0, 0.05);
 }
 
 .accordion-title {
