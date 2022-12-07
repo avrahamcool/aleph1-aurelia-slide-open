@@ -29,6 +29,11 @@ export class SlideOpenCustomAttribute {
 	}
 
 	setOpened(newValue: boolean) {
+		if(newValue && !this.element.scrollHeight)
+		{
+			this.queue.queueTask(() => this.setOpened(newValue));
+			return;
+		}
 		this.element.style.maxHeight = newValue ? `${this.element.scrollHeight}px` : "0px";
 	}
 	setTransition(newValue: string) {

@@ -2,7 +2,7 @@
 	"name": "aleph1-aurelia-slide-open",
 	"description": "an aurelia plugin for showing/hiding elements with sliding animation",
 	"author": "Essoudry Avraham",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/avrahamcool/aleph1-aurelia-slide-open.git"
